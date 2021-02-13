@@ -1,0 +1,22 @@
+{
+    "name": "mernApp",
+    "version": "1.0.0",
+    "main": "server.js",
+    "scripts": {
+        "start": "nodemon server.js",
+        "start-server": "node server.js"
+    },
+    "devDependencies": {
+        "nodemon": "^1.18.3"
+    },
+    "dependencies": {
+        "body-parser": "^1.18.2",
+        "create-react-app": "^1.5.2",
+        "express": "^4.16.2",
+        "jwt-simple": "^0.5.1",
+        "mongoose": "^5.0.7",
+        "mongoose-float": "^1.0.4",
+        "mongoose-timestamp": "^0.6.0",
+        "password-hash": "^1.2.2"
+    }
+}

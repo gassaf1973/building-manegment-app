@@ -1,0 +1,586 @@
+
+export default {
+    references: {
+        titleLabel: 'Value liste',
+        properties: [
+            {
+                type: 'TextField',
+                attribute: 'id',
+                label: 'ID',
+                disabled: 'readOnly',
+                visibleInMode: {
+                    creation: false,
+                    edition: true,
+                },
+                fullWidth: true,
+            },
+            {
+                type: 'TextField',
+                attribute: 'labelFR',
+                label: 'Label FR',
+                disabled: false,
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+                fullWidth: true,
+                autoFocus: true,
+                maxLength: '255',
+            },
+            {
+                type: 'TextField',
+                attribute: 'labelEN',
+                label: 'Label EN',
+                disabled: false,
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+                fullWidth: true,
+                maxLength: '255',
+            },
+        ],
+    },
+    projects: {
+        titleLabel: 'Project Properties',
+        properties: [
+            {
+                type: 'TextField',
+                attribute: 'project_name',
+                label: 'Name',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+                fullWidth: true,
+                autoFocus: true,
+                maxLength: '255',
+            },
+            {
+                type: 'DatePicker',
+                label: 'Start Date',
+                attribute: 'start_date',
+                required: true,
+                fullWidth: false,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+            {
+                type: 'DatePicker',
+                label: 'End Date',
+                attribute: 'end_date',
+                required: true,
+                fullWidth: false,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+            {
+                type: 'Number',
+                attribute: 'cost',
+                label: 'Cost',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+            {
+                type: 'Number',
+                attribute: 'sale',
+                label: 'Sale',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+            {
+                type: 'Number',
+                attribute: 'rest_to_pay',
+                label: 'Rest to pay',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+            {
+                type: 'Number',
+                attribute: 'margin',
+                label: 'Margin',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+            {
+                type: 'Selects',
+                attribute: 'region_id',
+                label: 'Region',
+                elements: 'COUNTRIES',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+            {
+                type: 'Selects',
+                attribute: 'project_status_id',
+                label: 'Status',
+                elements: 'COUNTRIES',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+            {
+                type: 'Selects',
+                attribute: 'project_type_id',
+                label: 'Type',
+                elements: 'COUNTRIES',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+            /*
+            {
+                type: 'DateTimePicker',
+                label: 'Date Time',
+                attribute: 'documentDateTime',
+                //disabled: 'readOnly',
+                fullWidth: false,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+            {
+                type: 'Checkbox',
+                label: 'Checkbox',
+                attribute: 'checkbox',
+                // disabled: 'readOnly',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+            {
+                type: 'RichText',
+                label: 'RichText',
+                attribute: 'description',
+                required: true,
+                //disabled: 'readOnly',
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+                multiLine: true,
+                rows: 5,
+                maxLength: 10000,
+                fullWidth: true,
+            },
+            */
+        ],
+    },
+    supliers: {
+        titleLabel: 'Suplier Properties',
+        properties: [
+            {
+                type: 'TextField',
+                attribute: 'tier_name',
+                label: 'Name',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+                fullWidth: true,
+                autoFocus: true,
+                maxLength: '255',
+            },
+            {
+                type: 'TextField',
+                attribute: 'address1',
+                label: 'Address 1',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+                fullWidth: true,
+                maxLength: '255',
+            },
+            {
+                type: 'TextField',
+                attribute: 'address2',
+                label: 'Address 2',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+                fullWidth: true,
+                maxLength: '255',
+            },
+            {
+                type: 'TextField',
+                attribute: 'mobile',
+                label: 'Mobile',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+                maxLength: '255',
+            },
+            {
+                type: 'TextField',
+                attribute: 'phone',
+                label: 'Phone',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+                maxLength: '255',
+            },
+            {
+                type: 'TextField',
+                attribute: 'email',
+                label: 'Email',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+                fullWidth: true,
+                maxLength: '255',
+            },
+            {
+                type: 'Selects',
+                attribute: 'family_tier_id',
+                label: 'Family Tier',
+                elements: 'COUNTRIES',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+        ],
+    },
+    customers: {
+        titleLabel: 'Customers Properties',
+        properties: [
+            {
+                type: 'TextField',
+                attribute: 'tier_name',
+                label: 'Name',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+                fullWidth: true,
+                autoFocus: true,
+                maxLength: '255',
+            },
+            {
+                type: 'TextField',
+                attribute: 'address1',
+                label: 'Address 1',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+                fullWidth: true,
+                maxLength: '255',
+            },
+            {
+                type: 'TextField',
+                attribute: 'address2',
+                label: 'Address 2',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+                fullWidth: true,
+                maxLength: '255',
+            },
+            {
+                type: 'TextField',
+                attribute: 'mobile',
+                label: 'Mobile',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+                maxLength: '255',
+            },
+            {
+                type: 'TextField',
+                attribute: 'phone',
+                label: 'Phone',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+                maxLength: '255',
+            },
+            {
+                type: 'TextField',
+                attribute: 'email',
+                label: 'Email',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+                fullWidth: true,
+                maxLength: '255',
+            },
+        ],
+    },
+    products: {
+        titleLabel: 'Products Properties',
+        properties: [
+            {
+                type: 'TextField',
+                attribute: 'product_name',
+                label: 'Name',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+                fullWidth: true,
+                autoFocus: true,
+                maxLength: '255',
+            },
+            {
+                type: 'TextField',
+                attribute: 'tva1',
+                label: 'TVA 1',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+                fullWidth: true,
+                maxLength: '255',
+            },
+            {
+                type: 'TextField',
+                attribute: 'tva2',
+                label: 'TVA 2',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+                fullWidth: true,
+                maxLength: '255',
+            },
+            {
+                type: 'Number',
+                attribute: 'unit_price',
+                label: 'Unit Price',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+            {
+                type: 'Selects',
+                attribute: 'family_id',
+                label: 'Family',
+                elements: 'COUNTRIES',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+        ],
+    },
+    orders: {
+        titleLabel: 'Orders Properties',
+        properties: [
+            {
+                type: 'TextField',
+                attribute: 'order_name',
+                label: 'Name',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+                fullWidth: true,
+                autoFocus: true,
+                maxLength: '255',
+            },
+            {
+                type: 'DatePicker',
+                label: 'Date',
+                attribute: 'date',
+                required: true,
+                fullWidth: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+            {
+                type: 'Number',
+                label: 'Quantity',
+                attribute: 'quantity',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+            {
+                type: 'Number',
+                attribute: 'unit_price',
+                label: 'Unit Price',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+            {
+                type: 'Number',
+                attribute: 'discount',
+                label: 'Discount',
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+            {
+                type: 'Number',
+                attribute: 'total_order',
+                label: 'Total Order',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+            {
+                type: 'Number',
+                attribute: 'total_transaction',
+                label: 'Total Transaction',
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+            {
+                type: 'Number',
+                attribute: 'balance',
+                label: 'Balance',
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+            {
+                type: 'Selects',
+                attribute: 'project_id',
+                label: 'Project',
+                elements: 'COUNTRIES',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+            {
+                type: 'Selects',
+                attribute: 'tier_id',
+                label: 'Tier',
+                elements: 'COUNTRIES',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+            {
+                type: 'Selects',
+                attribute: 'product_id',
+                label: 'Product',
+                elements: 'COUNTRIES',
+                required: true,
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+            {
+                type: 'RichText',
+                label: 'Comment',
+                attribute: 'comment',
+                //disabled: 'readOnly',
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+                multiLine: true,
+                rows: 5,
+                maxLength: 500,
+                fullWidth: true,
+            },
+            {
+                type: 'Number',
+                attribute: 'status',
+                label: 'Status',
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+            {
+                type: 'TextField',
+                attribute: 'validated_by',
+                label: 'Validated By',
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+                maxLength: '42',
+            },
+            {
+                type: 'DatePicker',
+                label: 'Validated Date',
+                attribute: 'validated_date',
+                visibleInMode: {
+                    creation: true,
+                    edition: true,
+                },
+            },
+        ],
+    },
+
+}
